@@ -141,6 +141,7 @@
     align-items: flex-start;
     position: relative;
     flex: 0 0 auto;
+    cursor: default;
 }
 
 .minniemal .team-leader {
@@ -155,6 +156,7 @@
     letter-spacing: 0;
     line-height: 30px;
     white-space: nowrap;
+    cursor: pointer;
 }
 
 .minniemal .text-wrapper-5 {
