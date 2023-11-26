@@ -2,15 +2,16 @@
     background-color: #e3f2fa;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
     width: 100%;
 }
 
 .minniemal .div {
     background-color: #e3f2fa;
     width: 1920px;
-    height: 8348px;
     position: relative;
+    padding-left: 375px;
+    padding-top: 50px;
 }
 
 .minniemal .experience {
@@ -20,9 +21,6 @@
     align-items: flex-start;
     gap: 40px;
     padding: 78px 80px;
-    position: absolute;
-    top: 1865px;
-    left: 375px;
     background-color: #ffffff;
 }
 
@@ -180,9 +178,6 @@
     align-items: center;
     justify-content: space-between;
     padding: 0px 80px;
-    position: absolute;
-    top: 1536px;
-    left: 375px;
     background-color: var(--main-blue);
 }
 
@@ -221,9 +216,6 @@
     align-items: flex-start;
     gap: 40px;
     padding: 80px;
-    position: relative;
-    top: 896px;
-    left: 375px;
     background-color: #ffffff;
 }
 
@@ -252,6 +244,7 @@
     font-size: 20px;
     letter-spacing: 0;
     line-height: 30px;
+    margin-top: 20px;
 }
 
 .minniemal .text-wrapper-8 {
@@ -270,9 +263,6 @@
     align-items: flex-start;
     gap: 115px;
     padding: 78px 80px;
-    position: absolute;
-    top: 4165px;
-    left: 375px;
     background-color: #ffffff;
 }
 
@@ -491,9 +481,6 @@
     align-items: flex-start;
     gap: 8px;
     padding: 70px 100px;
-    position: absolute;
-    top: 5372px;
-    left: 375px;
     background-color: var(--main-blue);
 }
 
@@ -791,11 +778,8 @@
 }
 
 .minniemal .cover-letter {
-    position: absolute;
     width: 868px;
     height: 914px;
-    top: 6074px;
-    left: 375px;
 }
 
 .minniemal .frame {
@@ -831,23 +815,22 @@
     font-size: 20px;
     letter-spacing: 0;
     line-height: 30px;
+    margin-top: 20px;
 }
 
 .minniemal .overlap {
-    position: absolute;
     width: 868px;
     height: 1064px;
-    top: 6988px;
-    left: 375px;
+    display: flex;
+    flex-direction: column;
 }
 
 .minniemal .contact {
-    position: absolute;
+    background-color: var(--main-blue);
     width: 868px;
     height: 1064px;
-    top: 0;
-    left: 0;
-    background-color: var(--main-blue);
+    display: flex;
+    flex-direction: column;
 }
 
 .minniemal .frame-2 {
@@ -893,6 +876,7 @@
     font-size: 20px;
     letter-spacing: 0;
     line-height: 30px;
+    margin-top: 20px;
 }
 
 .minniemal .text-wrapper-28 {
@@ -902,19 +886,17 @@
 }
 
 .minniemal .input {
-    position: absolute;
     width: 487px;
     height: 203px;
-    top: 630px;
-    left: 113px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .minniemal .vector-4 {
-    position: absolute;
-    width: 481px;
+    width: 400px;
     height: 3px;
-    top: 34px;
-    left: 0;
+
 }
 
 .minniemal .vector-5 {
@@ -933,11 +915,21 @@
     left: 0;
 }
 
+.minniemal .message-input {
+    background-color: #00042D;
+    width: 392px;
+    height: 30px;
+    margin-bottom: -20px;
+    border: none;
+    color: #ffffff;
+    font-family: "Montserrat-SemiBold", Helvetica;
+    font-size: 15px;
+    margin-left: 8px;
+}
+
 .minniemal .text-wrapper-29 {
-    position: absolute;
     width: 139px;
-    top: 0;
-    left: 11px;
+
     font-family: "Montserrat-SemiBold", Helvetica;
     font-weight: 600;
     color: #ffffffb2;
@@ -976,18 +968,13 @@
 }
 
 .minniemal .button {
-    position: absolute;
-    top: 890px;
-    left: 113px;
     display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
     padding: 16px 40px;
-    border: 2px solid;
-    border-color: #ffffff;
-    all: unset;
-    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    background-color: #00042D;
+    cursor: pointer;
 }
 
 .minniemal .text-wrapper-32 {
@@ -1005,11 +992,9 @@
 }
 
 .minniemal .footer {
-    position: absolute;
     width: 868px;
     height: 160px;
-    top: 8052px;
-    left: 375px;
+
 }
 
 .minniemal .portfolio {
@@ -1019,9 +1004,6 @@
     align-items: flex-start;
     gap: 40px;
     padding: 78px 80px;
-    position: absolute;
-    top: 2817px;
-    left: 375px;
     background-color: var(--main-blue);
 }
 
@@ -1058,6 +1040,7 @@
     align-self: stretch;
     width: 100%;
     flex: 0 0 auto;
+    margin-top: 20px;
 }
 
 .minniemal .images {
@@ -1120,17 +1103,30 @@
 }
 
 .minniemal .LINKEDIN-TWITTER {
+    font-family: "Montserrat-Bold", Helvetica;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-around;
     position: absolute;
     width: 559px;
     top: 702px;
     left: -256px;
     transform: rotate(-90deg);
-    font-family: "Montserrat-Regular", Helvetica;
-    font-weight: 400;
     color: var(--main-blue);
     font-size: 12px;
     letter-spacing: 5px;
     line-height: 30px;
+}
+
+.minniemal .LINKEDIN-TWITTER a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.minniemal .LINKEDIN-TWITTER a:hover {
+    color:#00A0C6;
+    text-decoration:none;
+    cursor:pointer;
 }
 
 .minniemal .text-wrapper-36 {
@@ -1163,9 +1159,6 @@
     justify-content: center;
     gap: 47px;
     padding: 0px 80px;
-    position: absolute;
-    top: 118px;
-    left: 375px;
     background-color: var(--main-blue);
     display: flex;
     flex-direction: column;
@@ -1237,10 +1230,25 @@
     box-sizing: border-box;
 }
 
+.minniemal .download_cv-button {
+    background-color: #00042D;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    display: flex;
+    padding: 16px 40px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border: 2px solid #FFF;
+    cursor: pointer;
+}
+
 .minniemal .unsplash-fy {
     position: absolute;
     width: 418px;
     height: 399px;
-    top: 133px;
-    left: 659px;
+    top: 223px;
+    left: 1017px;
 }
