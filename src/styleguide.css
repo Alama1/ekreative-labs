@@ -1,0 +1,22 @@
+:root {
+    --main-blue: rgba(0, 4, 45, 1);
+    --h1-font-family: "PlayfairDisplay-Regular", Helvetica;
+    --h1-font-weight: 400;
+    --h1-font-size: 90px;
+    --h1-letter-spacing: 0px;
+    --h1-line-height: 90px;
+    --h1-font-style: normal;
+    --h2-font-family: "PlayfairDisplay-Regular", Helvetica;
+    --h2-font-weight: 400;
+    --h2-font-size: 50px;
+    --h2-letter-spacing: 0px;
+    --h2-line-height: 94.5px;
+    --h2-font-style: normal;
+    --p1-font-family: "Montserrat-Regular", Helvetica;
+    --p1-font-weight: 400;
+    --p1-font-size: 16px;
+    --p1-letter-spacing: 0px;
+    --p1-line-height: 30px;
+    --p1-font-style: normal;
+    --drop: 0px 4px 60px 0px rgba(61, 20, 148, 0.4);
+}

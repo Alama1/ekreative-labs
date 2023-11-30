@@ -1,0 +1,15 @@
+.home {
+  background-color: #e3f2fa;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+
+  .page {
+    background-color: #e3f2fa;
+    width: 1920px;
+    position: relative;
+    padding-left: 375px;
+    padding-top: 50px;
+  }
+}

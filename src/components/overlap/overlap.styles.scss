@@ -1,0 +1,115 @@
+.overlap {
+  width: 868px;
+  height: 1064px;
+  display: flex;
+  flex-direction: column;
+  .contact {
+    background-color: var(--main-blue);
+    width: 868px;
+    height: 1064px;
+    display: flex;
+    flex-direction: column;
+    .frame-2 {
+      display: inline-flex;
+      flex-direction: column;
+      gap: 40px;
+      top: 78px;
+      left: 113px;
+      align-items: flex-start;
+      position: relative;
+      .text-wrapper-27 {
+        position: relative;
+        width: 367.49px;
+        height: 92px;
+        margin-top: -1px;
+        font-family: "Playfair Display-Regular", Helvetica;
+        font-weight: 400;
+        color: #ffffff;
+        font-size: 50px;
+        letter-spacing: 0;
+        line-height: 94.5px;
+        white-space: nowrap;
+      }
+      .rectangle-14 {
+        position: relative;
+        width: 100px;
+        height: 2.25px;
+        margin-left: -48.87px;
+        background-color: #ffffff;
+        transform: rotate(90deg);
+      }
+      .consectetur {
+        position: relative;
+        width: 499.38px;
+        height: 280px;
+        font-family: "Montserrat-SemiBold", Helvetica;
+        font-weight: 400;
+        color: #ffffff;
+        font-size: 20px;
+        letter-spacing: 0;
+        line-height: 30px;
+        margin-top: 20px;
+      }
+      .text-wrapper-8 {
+        font-weight: 600;
+      }
+      .text-wrapper-9 {
+        font-family: "Montserrat-Regular", Helvetica;
+        font-size: 15px;
+      }
+      .text-wrapper-28 {
+        font-family: "Montserrat-Bold", Helvetica;
+        font-weight: 700;
+        font-size: 15px;
+      }
+      .text-wrapper-9 {
+        font-family: "Montserrat-Regular", Helvetica;
+        font-size: 15px;
+      }
+      .input {
+        width: 487px;
+        height: 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        .message-input {
+          background-color: #00042D;
+          width: 392px;
+          height: 30px;
+          margin-bottom: -20px;
+          border: none;
+          color: #ffffff;
+          font-family: "Montserrat-SemiBold", Helvetica;
+          font-size: 15px;
+          margin-left: 8px;
+        }
+        .vector-4 {
+          width: 400px;
+          height: 3px;
+        }
+      }
+      .button {
+        display: inline-flex;
+        padding: 16px 40px;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        background-color: #00042D;
+        cursor: pointer;
+        .text-wrapper-32 {
+          position: relative;
+          width: fit-content;
+          margin-top: -2px;
+          font-family: "Montserrat-SemiBold", Helvetica, serif;
+          font-weight: 600;
+          color: #ffffff;
+          font-size: 12px;
+          text-align: center;
+          letter-spacing: 5px;
+          line-height: 24px;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+}

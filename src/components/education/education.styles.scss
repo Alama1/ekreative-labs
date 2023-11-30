@@ -1,0 +1,185 @@
+.education  {
+  display: flex;
+  flex-direction: column;
+  width: 868px;
+  align-items: flex-start;
+  gap: 115px;
+  padding: 78px 80px;
+  background-color: #ffffff;
+  .div-2 {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: flex-start;
+    position: relative;
+    flex: 0 0 auto;
+    .text-wrapper {
+      position: relative;
+      width: 367.49px;
+      height: 92px;
+      margin-top: -1px;
+      font-family: var(--h2-font-family);
+      font-weight: var(--h2-font-weight);
+      color: var(--main-blue);
+      font-size: var(--h2-font-size);
+      letter-spacing: var(--h2-letter-spacing);
+      line-height: var(--h2-line-height);
+      white-space: nowrap;
+      font-style: var(--h2-font-style);
+    }
+    .dolor-sit-amet {
+      position: relative;
+      width: 631.27px;
+      height: 208px;
+      font-family: "Montserrat-SemiBold", Helvetica;
+      font-weight: 400;
+      color: var(--main-blue);
+      font-size: 20px;
+      letter-spacing: 0;
+      line-height: 30px;
+      margin-top: 20px;
+      .text-wrapper-8 {
+        font-weight: 600;
+      }
+      .text-wrapper-9 {
+        font-family: "Montserrat-Regular", Helvetica;
+        font-size: 15px;
+      }
+    }
+  }
+  .timeline {
+    position: relative;
+    width: 558px;
+    height: 456px;
+    .timeline-2 {
+      position: absolute;
+      width: 35px;
+      height: 400px;
+      top: 0;
+      left: 80px;
+      .overlap-group {
+        position: absolute;
+        width: 35px;
+        height: 34px;
+        top: 366px;
+        left: 0;
+        border-radius: 17.5px/17.02px;
+        border: 2px solid;
+        border-color: var(--main-blue);
+        .ellipse {
+          position: relative;
+          width: 19px;
+          height: 18px;
+          top: 6px;
+          left: 6px;
+          background-color: var(--main-blue);
+          border-radius: 9.5px/9.24px;
+          border: 2px solid;
+          border-color: var(--main-blue);
+        }
+      }
+      .ellipse-2 {
+        position: absolute;
+        width: 35px;
+        height: 35px;
+        top: 0;
+        left: 0;
+        border-radius: 17.5px;
+        border: 2px solid;
+        border-color: var(--main-blue);
+      }
+      .ellipse-3 {
+        position: absolute;
+        width: 35px;
+        height: 34px;
+        top: 108px;
+        left: 0;
+        border-radius: 17.5px/17.02px;
+        border: 2px solid;
+        border-color: var(--main-blue);
+      }
+      .ellipse-4 {
+        position: absolute;
+        width: 35px;
+        height: 34px;
+        top: 244px;
+        left: 0;
+        border-radius: 17.5px/17.02px;
+        border: 2px solid;
+        border-color: var(--main-blue);
+      }
+      .vector {
+        position: absolute;
+        width: 2px;
+        height: 53px;
+        top: 45px;
+        left: 16px;
+      }
+      .vector-2 {
+        position: absolute;
+        width: 2px;
+        height: 53px;
+        top: 297px;
+        left: 16px;
+      }
+      .vector-3 {
+        position: absolute;
+        width: 2px;
+        height: 73px;
+        top: 155px;
+        left: 16px;
+      }
+    }
+    .timeline-text {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 32px;
+      position: absolute;
+      top: 0;
+      left: 172px;
+      .p {
+        position: relative;
+        width: 385.53px;
+        margin-top: -1px;
+        font-family: "Montserrat-Regular", Helvetica;
+        font-weight: 400;
+        color: var(--main-blue);
+        font-size: 15px;
+        letter-spacing: 0;
+        line-height: 30px;
+      }
+      .text-wrapper-10 {
+        position: relative;
+        width: 385.53px;
+        font-family: "Montserrat-Regular", Helvetica;
+        font-weight: 400;
+        color: var(--main-blue);
+        font-size: 15px;
+        letter-spacing: 0;
+        line-height: 30px;
+        margin-top: 20px;
+      }
+    }
+    .years {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: absolute;
+      width: 73px;
+      height: 380px;
+      top: 0;
+      left: 0;
+      margin-top: 10px;
+      .text-wrapper-11 {
+        width: 73px;
+        font-family: "Montserrat-Bold", Helvetica;
+        font-weight: 700;
+        color: var(--main-blue);
+        font-size: 15px;
+        letter-spacing: 0;
+        white-space: nowrap;
+      }
+    }
+  }
+}

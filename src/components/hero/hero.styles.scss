@@ -1,0 +1,90 @@
+.hero {
+  width: 868px;
+  height: 778px;
+  justify-content: center;
+  gap: 47px;
+  padding: 0px 80px;
+  background-color: var(--main-blue);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  .hero-text {
+    width: 475px;
+    gap: 16px;
+    position: relative;
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    .hello-i-m-john-doe {
+      position: relative;
+      align-self: stretch;
+      margin-top: -1px;
+      font-family: var(--h1-font-family);
+      font-weight: var(--h1-font-weight);
+      color: #ffffff;
+      font-size: var(--h1-font-size);
+      letter-spacing: var(--h1-letter-spacing);
+      line-height: var(--h1-line-height);
+      font-style: var(--h1-font-style);
+    }
+    .a-full-stack {
+      position: relative;
+      width: 510px;
+      height: 102px;
+      margin-right: -35px;
+      font-family: "Montserrat-Regular", Helvetica;
+      font-weight: 400;
+      color: #ffffff;
+      font-size: 16px;
+      letter-spacing: 0;
+      line-height: 32px;
+      .text-wrapper-37 {
+        font-family: "Montserrat-Regular", Helvetica;
+        font-weight: 400;
+        color: #ffffff;
+        font-size: 16px;
+        letter-spacing: 0;
+        line-height: 32px;
+      }
+      .text-wrapper-38 {
+        font-family: "Montserrat-SemiBoldItalic", Helvetica;
+        font-weight: 600;
+        font-style: italic;
+      }
+    }
+  }
+  .div-wrapper {
+    position: relative;
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 16px 40px;
+    border: 2px solid #ffffff;
+    all: unset;
+    box-sizing: border-box;
+    .download_cv-button {
+      background-color: #00042D;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      font-size: 16px;
+      display: flex;
+      padding: 16px 40px;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      border: 2px solid #FFF;
+      cursor: pointer;
+    }
+  }
+  .hero-image {
+    position: absolute;
+    width: 418px;
+    height: 399px;
+    top: 223px;
+    left: 1017px;
+  }
+}

@@ -1,0 +1,52 @@
+.cover-letter {
+  width: 868px;
+  height: 914px;
+  .frame {
+    display: flex;
+    width: 868px;
+    gap: 8px;
+    padding: 106px 80px;
+    background-color: #ffffff;
+    align-items: flex-start;
+    position: relative;
+    .div-2 {
+      display: inline-flex;
+      flex-direction: column;
+      gap: 40px;
+      align-items: flex-start;
+      position: relative;
+      flex: 0 0 auto;
+      .text-wrapper-26 {
+        position: relative;
+        width: fit-content;
+        margin-top: -1px;
+        font-family: "Playfair Display-Regular", Helvetica;
+        font-weight: 400;
+        color: var(--main-blue);
+        font-size: 50px;
+        letter-spacing: 0;
+        line-height: 60.5px;
+        white-space: nowrap;
+      }
+      .dolor-sit-amet-2 {
+        position: relative;
+        width: 631.27px;
+        height: 461px;
+        font-family: "Montserrat-SemiBold", Helvetica;
+        font-weight: 400;
+        color: var(--main-blue);
+        font-size: 20px;
+        letter-spacing: 0;
+        line-height: 30px;
+        margin-top: 20px;
+        .text-wrapper-8 {
+          font-weight: 600;
+        }
+        .text-wrapper-9 {
+          font-family: "Montserrat-Regular", Helvetica;
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}

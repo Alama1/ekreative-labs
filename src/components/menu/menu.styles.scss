@@ -1,0 +1,44 @@
+.menu {
+  position: absolute;
+  width: 50px;
+  height: 1005px;
+  top: 118px;
+  left: 301px;
+  .LINKEDIN-TWITTER {
+    font-family: "Montserrat-Bold", Helvetica;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    width: 559px;
+    top: 702px;
+    left: -256px;
+    transform: rotate(-90deg);
+    color: var(--main-blue);
+    font-size: 12px;
+    letter-spacing: 5px;
+    line-height: 30px;
+  }
+  .text-wrapper-36 {
+    position: absolute;
+    width: 180px;
+    top: 138px;
+    left: -74px;
+    transform: rotate(-90deg);
+    font-family: "Montserrat-Bold", Helvetica;
+    font-weight: 700;
+    color: var(--main-blue);
+    font-size: 12px;
+    text-align: right;
+    letter-spacing: 5px;
+    line-height: 30px;
+    white-space: nowrap;
+  }
+  .group-2 {
+    position: absolute;
+    width: 30px;
+    height: 24px;
+    top: -2px;
+    left: 0;
+  }
+}

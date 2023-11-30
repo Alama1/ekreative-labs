@@ -1,0 +1,29 @@
+.services {
+  display: flex;
+  width: 868px;
+  height: 329px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 80px;
+  background-color: var(--main-blue);
+  .icon {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+    flex: 0 0 auto;
+    .text-wrapper-6 {
+      position: relative;
+      width: fit-content;
+      font-family: var(--p1-font-family);
+      font-weight: var(--p1-font-weight);
+      color: #ffffff;
+      font-size: var(--p1-font-size);
+      letter-spacing: var(--p1-letter-spacing);
+      line-height: var(--p1-line-height);
+      white-space: nowrap;
+      font-style: var(--p1-font-style);
+    }
+  }
+}
