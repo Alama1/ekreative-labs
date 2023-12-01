@@ -1,8 +1,7 @@
 import './home.style.scss'
 import Palettes from "../../components/palettes/palettes.component";
-import paletteColors from '../../pallete.json'
 
-const Home = () => {
+const Home = ({paletteColors}) => {
     return (
         <div className='home'>
             <div className='home-padding'>

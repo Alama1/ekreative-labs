@@ -8,13 +8,14 @@ const Palettes = ({paletteColors}) => {
         <div className='palettes'>
             <Header/>
             <FirstPalette
-                firstPalette={paletteColors.shift()}
+                firstPalette={paletteColors[0]}
                 ads={'https://media.tenor.com/ph3pdOqC4v4AAAAC/cat.gif'}
-                secondPalette={paletteColors.shift()}
+                secondPalette={paletteColors[1]}
                 links={[{name: 'Link 1', href: 'https://www.google.com/'}, {name: 'Link 2', href: 'https://www.google.com/'}, {name: 'Link 3', href: 'https://www.google.com/'}]}
             />
             <div className='all-palettes'>
-                {paletteColors.map((palette) => {
+                {paletteColors.map((palette, index) => {
+                    if (index <= 2) return false
                     return(
                         <Palette key={palette.id} palette={palette}/>
                     )

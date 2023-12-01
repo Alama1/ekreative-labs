@@ -1,9 +1,13 @@
 .footer {
   width: 100%;
-  height: 120px;
+  height: 9%;
   flex-shrink: 0;
   background-color: #0c2461;
   background-image: url(https://flatuicolors.com/static/img/stars-opacity.0979c1.svg);
+  position:absolute;
+  left:0;
+  bottom:0;
+  right:0;
 }
 .nav-margin {
   margin-left: 3%;
