@@ -4,7 +4,7 @@ const Header = () => {
     return(
         <div className='header'>
             <a className='logo'>
-                MY SUPER COLORS SHIT
+                MY SUPER COLORS
             </a>
             <div className='header-menu'>
                 <a className='header-menu--author'>About author</a>
