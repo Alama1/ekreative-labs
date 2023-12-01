@@ -15,28 +15,28 @@ const Services = () => {
                 imgSrc: Service1Icon,
                 iconClass: 'img',
                 serviceText: 'Service name',
-                textClass: 'text-wrapper-6'
+                textClass: 'service-text'
             }}/>
             <Service service={{
                 className: 'icon',
                 imgSrc: Service2Icon,
                 iconClass: 'img',
                 serviceText: 'Service name',
-                textClass: 'text-wrapper-6'
+                textClass: 'service-text'
             }}/>
             <Service service={{
                 className: 'icon',
                 imgSrc: Service3Icon,
                 iconClass: 'img',
                 serviceText: 'Service name',
-                textClass: 'text-wrapper-6'
+                textClass: 'service-text'
             }}/>
             <Service service={{
                 className: 'icon',
                 imgSrc: Service4Icon,
                 iconClass: 'img',
                 serviceText: 'Service name',
-                textClass: 'text-wrapper-6'
+                textClass: 'service-text'
             }}/>
         </div>
     )

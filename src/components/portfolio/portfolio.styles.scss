@@ -6,14 +6,14 @@
   gap: 40px;
   padding: 78px 80px;
   background-color: var(--main-blue);
-  .portfolio-2 {
+  .portfolio-title-wrapper {
     display: inline-flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
     position: relative;
     flex: 0 0 auto;
-    .text-wrapper-33 {
+    .portfolio-title {
       position: relative;
       width: 491.49px;
       height: 92px;
@@ -28,7 +28,7 @@
       font-style: var(--h2-font-style);
     }
   }
-  .accordions {
+  .main-section {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -46,13 +46,13 @@
       align-self: stretch;
       width: 100%;
       flex: 0 0 auto;
-      .rectangle-15 {
+      .image {
         position: relative;
         align-self: stretch;
         width: 100%;
       }
     }
-    .div-3 {
+    .skills-wrapper {
       position: relative;
       align-self: stretch;
       height: 92px;
@@ -63,7 +63,7 @@
       letter-spacing: 0;
       line-height: 94.5px;
       white-space: nowrap;
-      .text-wrapper-34 {
+      .skill-number {
         font-family: "Playfair Display-Regular", Helvetica;
         font-weight: 400;
         color: #ffffff;
@@ -71,7 +71,7 @@
         letter-spacing: 0;
         line-height: 94.5px;
       }
-      .text-wrapper-35 {
+      .skill-text {
         font-size: 50px;
         margin-left: 15px;
       }

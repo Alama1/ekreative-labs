@@ -9,14 +9,14 @@
     background-color: #ffffff;
     align-items: flex-start;
     position: relative;
-    .div-2 {
+    .text-div {
       display: inline-flex;
       flex-direction: column;
       gap: 40px;
       align-items: flex-start;
       position: relative;
       flex: 0 0 auto;
-      .text-wrapper-26 {
+      .cover-title {
         position: relative;
         width: fit-content;
         margin-top: -1px;
@@ -28,7 +28,7 @@
         line-height: 60.5px;
         white-space: nowrap;
       }
-      .dolor-sit-amet-2 {
+      .main-text {
         position: relative;
         width: 631.27px;
         height: 461px;
@@ -39,10 +39,10 @@
         letter-spacing: 0;
         line-height: 30px;
         margin-top: 20px;
-        .text-wrapper-8 {
+        .main-text--bald {
           font-weight: 600;
         }
-        .text-wrapper-9 {
+        .main-text--thin {
           font-family: "Montserrat-Regular", Helvetica;
           font-size: 15px;
         }

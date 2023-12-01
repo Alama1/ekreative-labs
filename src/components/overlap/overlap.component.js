@@ -10,29 +10,31 @@ const Overlap = () => {
     return (
         <div className="overlap">
             <div className="contact">
-                <div className="frame-2">
-                    <div className="text-wrapper-27">Contact</div>
-                    <div className="rectangle-14"></div>
-                    <p className="consectetur">
-                        <span className="text-wrapper-8">
+                <div className="overlap-wrapper">
+                    <div className="overlap-title">Contact</div>
+                    <div className="vector"></div>
+                    <p className="main-text">
+                        <span className="main-text--bald">
                             Consectetur adipiscing elit viverra tristique placerat in massa consectetur
                             <br/>
                         </span>
-                        <span className="text-wrapper-9">
+                        <span className="main-text--thin">
                             <br/>
                             Vitae faucibus diam consequat maecenas. Turpis metus sit diam purus leo in varius ac quam loremest persetera<br/>
                             <br/>
                         </span>
-                        <span className="text-wrapper-28">EMAIL:</span>
-                        <span className="text-wrapper-9"> company@youremail.com <br/></span>
-                        <span className="text-wrapper-28">WEBSITE:</span>
-                        <span className="text-wrapper-9"> www.yourwebsite.com</span>
+                        <span className="contact-info--title">EMAIL:</span>
+                        <span className="contact-info--text"> company@youremail.com <br/></span>
+                        <span className="contact-info--title">WEBSITE:</span>
+                        <span className="contact-info--text"> www.yourwebsite.com</span>
                     </p>
                     <InputForm input={{
-                        fields: [{placeholder: 'Name', key: 'name'},{placeholder: 'Email', key: 'email'}, {placeholder: 'Message', key: 'message'}
-                        ]
-                    }}
-                               button={{text: 'Send message!', onClick: onSubmitButtonClick}}/>
+                                    fields: [
+                                        {placeholder: 'Name', key: 'name'},
+                                        {placeholder: 'Email', key: 'email'},
+                                        {placeholder: 'Message', key: 'message'}]}}
+                               button={
+                                        {text: 'Send message!', onClick: onSubmitButtonClick}}/>
                 </div>
             </div>
         </div>

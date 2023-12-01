@@ -4,13 +4,13 @@ const CoverLetter = () => {
     return (
         <div className="cover-letter">
             <div className="frame">
-                <div className="div-2">
-                    <div className="text-wrapper-26">Cover Letter</div>
-                    <p className="dolor-sit-amet-2">
-                        <span className="text-wrapper-8">
+                <div className="text-div">
+                    <div className="cover-title">Cover Letter</div>
+                    <p className="main-text">
+                        <span className="main-text--bald">
                             Dolor sit amet, consectetur adipiscing elit viverra tristique placerat in massa consecteturquisque
                         </span>
-                        <span className="text-wrapper-9"><br/>
+                        <span className="main-text--thin"><br/>
                             Faucibus sed tristique fames sed aliquet ultricies eget viverra arcu. Vitae faucibus diam
                           consequat maecenas. Turpis metus sit diam purus leo in varius ac quam. Nunc amet tristique volutpat
                           adipiscing vulputate est phasellus. Volutpat faucibus praesent ac lobortis aliquam dolor. Eget enim

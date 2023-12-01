@@ -4,14 +4,14 @@ import Timeline from './timeline.component'
 const Education = () => {
     return (
         <div className="education">
-            <div className="div-2">
-                <div className="text-wrapper">Education</div>
-                <p className="dolor-sit-amet">
-                  <span className="text-wrapper-8">
+            <div className="main-div">
+                <div className="education-title">Education</div>
+                <p className="main-text">
+                  <span className="main-text--bald">
                       Dolor sit amet, consectetur adipiscing elit viverra tristique placerat in massa consectetur
                       quisque
                   </span>
-                    <span className="text-wrapper-9">
+                    <span className="main-text--thin">
                       <br/>Faucibus sed tristique fames sed aliquet ultricies eget viverra arcu. Vitae faucibus diam
                     consequat maecenas. Turpis metus sit diam purus leo in varius ac quam. Nunc amet tristique volutpat
                     adipiscing vulputate phasellus. Volutpat faucibus praesent ac lobortis aliquam dolor.

@@ -9,7 +9,7 @@
     height: 1064px;
     display: flex;
     flex-direction: column;
-    .frame-2 {
+    .overlap-wrapper {
       display: inline-flex;
       flex-direction: column;
       gap: 40px;
@@ -17,7 +17,7 @@
       left: 113px;
       align-items: flex-start;
       position: relative;
-      .text-wrapper-27 {
+      .overlap-title {
         position: relative;
         width: 367.49px;
         height: 92px;
@@ -30,7 +30,7 @@
         line-height: 94.5px;
         white-space: nowrap;
       }
-      .rectangle-14 {
+      .vector {
         position: relative;
         width: 100px;
         height: 2.25px;
@@ -38,7 +38,7 @@
         background-color: #ffffff;
         transform: rotate(90deg);
       }
-      .consectetur {
+      .main-text {
         position: relative;
         width: 499.38px;
         height: 280px;
@@ -50,19 +50,19 @@
         line-height: 30px;
         margin-top: 20px;
       }
-      .text-wrapper-8 {
+      .main-text--bald {
         font-weight: 600;
       }
-      .text-wrapper-9 {
+      .main-text--thin {
         font-family: "Montserrat-Regular", Helvetica;
         font-size: 15px;
       }
-      .text-wrapper-28 {
+      .contact-info--title {
         font-family: "Montserrat-Bold", Helvetica;
         font-weight: 700;
         font-size: 15px;
       }
-      .text-wrapper-9 {
+      .contact-info--text {
         font-family: "Montserrat-Regular", Helvetica;
         font-size: 15px;
       }
@@ -83,7 +83,7 @@
           font-size: 15px;
           margin-left: 8px;
         }
-        .vector-4 {
+        .input--underscore {
           width: 400px;
           height: 3px;
         }
@@ -96,7 +96,7 @@
         gap: 8px;
         background-color: #00042D;
         cursor: pointer;
-        .text-wrapper-32 {
+        .button--text {
           position: relative;
           width: fit-content;
           margin-top: -2px;

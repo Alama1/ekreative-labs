@@ -4,11 +4,11 @@ import Skill from './skill.component'
 const Skills = () => {
     return (
         <div className="skills">
-            <div className="skills-2">
-                <div className="text-wrapper-15">Skills</div>
-                <div className="rectangle-3"></div>
+            <div className="skills-wrapper">
+                <div className="skills-title">Skills</div>
+                <div className="vector"></div>
                 <div className="group">
-                    <div className="overlap-group-2">
+                    <div className="skills-group">
                         <Skill skillInfo={{percentage: '69', skill: 'Skill 1'}}/>
                         <Skill skillInfo={{percentage: '30', skill: 'Skill 2'}}/>
                         <Skill skillInfo={{percentage: '99', skill: 'Skill 3'}}/>

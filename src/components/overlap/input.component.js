@@ -19,12 +19,12 @@ const InputForm = ({input, button}) => {
                     <div className="input" key={field.key}>
                         <input placeholder={field.placeholder} onChange={(e) => {
                             onInputChange(e, field.key)}} className="message-input"/>
-                        <img className="vector-4"/>
+                        <img className="input--underscore"/>
                     </div>
                 )})
             }
             <button className="button" onClick={() => onClick(inputs)}>
-                <div className="text-wrapper-32">{text}</div>
+                <div className="button--text">{text}</div>
             </button>
         </Fragment>
     )

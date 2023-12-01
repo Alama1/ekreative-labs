@@ -1,14 +1,13 @@
 import './skills.styles.scss'
-import {Fragment} from "react";
 
 const Skill = ({ skillInfo }) => {
     const { percentage, skill } = skillInfo
     return (
         <div className='skill'>
             <p className='skill-percentage'>{percentage}</p>
-            <div className='vector'></div>
+            <div className='skill-vector'></div>
             <div className='rectangle' style={{width: 3.8 * percentage}} >
-                <p className='skillName'>{skill}</p>
+                <p className='skill-name'>{skill}</p>
             </div>
         </div>
     )

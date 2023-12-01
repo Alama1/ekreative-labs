@@ -6,29 +6,29 @@ import image2 from '../../assets/rectangle-269.png'
 const Portfolio = () => {
     return (
         <div className="portfolio">
-            <div className="portfolio-2">
-                <div className="text-wrapper-33">Portfolio</div>
+            <div className="portfolio-title-wrapper">
+                <div className="portfolio-title">Portfolio</div>
             </div>
-            <div className="accordions">
+            <div className="main-section">
                 <div className="images">
-                    <img className="rectangle-15" src={image1}/>
-                    <img className="rectangle-15" src={image2}/>
+                    <img className="image" src={image1}/>
+                    <img className="image" src={image2}/>
                 </div>
-                <p className="div-3">
-                    <span className="text-wrapper-34">01</span>
-                    <span className="text-wrapper-35">Fashion</span>
+                <p className="skills-wrapper">
+                    <span className="skill-number">01</span>
+                    <span className="skill-text">Fashion</span>
                 </p>
-                <p className="div-3">
-                    <span className="text-wrapper-34">02</span>
-                    <span className="text-wrapper-35">Art</span>
+                <p className="skills-wrapper">
+                    <span className="skill-number">02</span>
+                    <span className="skill-text">Art</span>
                 </p>
-                <p className="div-3">
-                    <span className="text-wrapper-34">03</span>
-                    <span className="text-wrapper-35">Design</span>
+                <p className="skills-wrapper">
+                    <span className="skill-number">03</span>
+                    <span className="skill-text">Design</span>
                 </p>
-                <p className="div-3">
-                    <span className="text-wrapper-34">04</span>
-                    <span className="text-wrapper-35">Styling</span>
+                <p className="skills-wrapper">
+                    <span className="skill-number">04</span>
+                    <span className="skill-text">Styling</span>
                 </p>
             </div>
         </div>

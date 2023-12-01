@@ -14,7 +14,7 @@ const Footer = () => {
                     <a href='https://twitter.com/'><img src={X} className="sm-icon"/></a>
                     <a href='https://www.youtube.com/'><img src={YT} className="sm-icon"/></a>
                 </div>
-                <div className="text">
+                <div className="copyright">
                     © Carlo CIccarelli 2022.
                 </div>
             </div>
