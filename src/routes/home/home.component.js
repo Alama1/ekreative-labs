@@ -10,6 +10,7 @@ import CoverLetter from "../../components/cover-letter/cover-letter.component";
 import Overlap from "../../components/overlap/overlap.component";
 import Footer from "../../components/footer/footer.component";
 import Menu from "../../components/menu/menu.component";
+import Navigation from "../../components/navigation/navigation.component";
 
 const Home = () => {
     return (
@@ -26,6 +27,7 @@ const Home = () => {
                 <Overlap/>
                 <Footer/>
                 <Menu/>
+                <Navigation/>
             </div>
         </div>
     )

@@ -1,5 +1,6 @@
 import heroImg from '../../assets/unsplash-bxq8pvfp-fy.png'
 import './hero.styles.scss'
+import CV from './cv.docx'
 const Hero = () => {
     return (
         <div className="hero">
@@ -12,11 +13,17 @@ const Hero = () => {
                 </p>
             </div>
             <button className="div-wrapper"/>
-            <form method="get" action="./cv.docx" className="div-wrapper">
+            <a
+                href={CV}
+                download="Not John Doe's CV"
+                target="_blank"
+                rel="noreferrer"
+                className='div-wrapper'
+            >
                 <button type="submit" className="download_cv-button">
                     DOWNLOAD CV
                 </button>
-            </form>
+            </a>
             <img className="hero-image" src={heroImg} alt='Image of me' />
         </div>
     )
