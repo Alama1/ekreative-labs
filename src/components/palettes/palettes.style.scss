@@ -1,0 +1,8 @@
+.palettes {
+  .all-palettes{
+    display: grid;
+    column-gap: 62px;
+    row-gap: 40px;
+    grid-template-columns: 30% 30% 30%;
+  }
+}

@@ -1,0 +1,26 @@
+.palette {
+  background-color: #fff;
+  box-sizing: border-box;
+  border-radius: 3px;
+  width: 100%;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 10px 0px 10px;
+  cursor: pointer;
+  .colors {
+    background-color: #61dafb;
+    border-radius: 3px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    height: 100%;
+  }
+  .palette-footer {
+    display: flex;
+    flex-direction: row;
+    margin-top: -5px;
+    justify-content: space-between;
+    padding: 0 10px 0 10px;
+  }
+}
