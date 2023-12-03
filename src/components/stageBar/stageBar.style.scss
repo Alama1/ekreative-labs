@@ -1,0 +1,18 @@
+.stage-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+}
+
+.active-line {
+  width: 40px;
+  height: 1px;
+  background: #007AFF;
+}
+
+.default-line {
+  width: 40px;
+  height: 1px;
+  background: #B9B9C3;
+}

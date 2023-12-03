@@ -1,0 +1,353 @@
+.registration {
+  display: flex;
+  width: 1440px;
+  height: 1024px;
+  padding: 44px 44px 44px 88px;
+  align-items: flex-start;
+  flex-shrink: 0;
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    .img {
+      width: 24px;
+      height: 24px;
+    }
+    .company-name {
+      color: #242731;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 18px; /* 112.5% */
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+  }
+  .content {
+    display: flex;
+    width: 456px;
+    padding-top: 8px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 80px;
+    flex-shrink: 0;
+    margin-left: 30%;
+    .registration-form {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 32px;
+      align-self: stretch;
+      .title {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        align-self: stretch;
+        .title--large {
+          margin: 0;
+          color: #242731;
+          font-family: Poppins;
+          font-size: 32px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 36px;
+        }
+        .title--small {
+          margin: 0;
+          color: #575F6E;
+          font-family: Roboto;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 300;
+          line-height: 22px;
+        }
+      }
+      .notification {
+        display: flex;
+        padding: 16px;
+        align-items: flex-start;
+        gap: 16px;
+        align-self: stretch;
+        border-radius: 8px;
+        background: #F0F2F4;
+        .lock-icon {
+          width: 24px;
+          height: 24px;
+        }
+        .notification-text {
+          color: #242426;
+          font-family: Poppins;
+          margin: 0;
+          font-size: 13px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 18px; /* 138.462% */
+        }
+        .close-icon {
+          width: 24px;
+          height: 24px;
+          cursor: pointer;
+        }
+      }
+      .phone-number-enter-form {
+        display: flex;
+        padding: 32px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 32px;
+        align-self: stretch;
+        border-radius: 8px;
+        border: 1px solid #E2E4E5;
+        .form-title {
+          align-self: stretch;
+          color: #242426;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 20px;
+          margin: 0;
+        }
+        .form-fields {
+          display: flex;
+          align-items: flex-start;
+          gap: 16px;
+          align-self: stretch;
+          .country-number {
+            display: flex;
+            width: 120px;
+            flex-direction: column;
+            align-items: flex-start;
+          }
+          .telephone-input {
+            display: flex;
+            padding: 8px 16px;
+            align-items: flex-start;
+            gap: 16px;
+            align-self: stretch;
+            border: 1px #575F6E;
+          }
+          .input-underline {
+            width: 217px;
+            height: 1px;
+            background: #E2E4E5;
+          }
+        }
+      }
+
+    }
+    .number-not-confirmed {
+      display: flex;
+      padding: 16px;
+      align-items: flex-end;
+      gap: 16px;
+      align-self: stretch;
+      border-radius: 8px;
+      border: 1px solid #E2E4E5;
+      .content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2px;
+        flex: 1 0 0;
+        .telephone {
+          color: #242426;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 28px;
+        }
+        .number-not-confirmed-yet {
+          color: #575F6E;
+          font-size: 13px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 18px;
+        }
+      }
+    }
+    .number-confirmed {
+      display: flex;
+      padding: 16px;
+      align-items: flex-end;
+      gap: 16px;
+      align-self: stretch;
+      border-radius: 8px;
+      border: 1px solid #E2E4E5;
+      .content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2px;
+        flex: 1 0 0;
+        margin: 0px;
+        .telephone {
+          color: #242426;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 28px;
+        }
+        .number-not-confirmed-yet {
+          color: #575F6E;
+          font-size: 13px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 18px;
+        }
+      }
+    }
+    .confirmation-code {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      align-self: stretch;
+      .confirmation-code-field {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        flex: 1 0 0;
+        .title {
+          display: flex;
+          height: 20px;
+          flex-direction: column;
+          justify-content: center;
+          align-self: stretch;
+          color: #242426;
+          font-size: 13px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 18px;
+        }
+        .confirmation-code-field--input {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          align-items: flex-start;
+          align-self: stretch;
+          .confirmation-code-input {
+            display: flex;
+            padding: 8px;
+            align-items: center;
+            gap: 8px;
+            width: 296px;
+            align-self: stretch;
+          }
+          .code-field-underscore {
+            width: 296px;
+            height: 1px;
+            background: #007AFF;
+          }
+        }
+        .confirmation-code-field--footer {
+          align-self: stretch;
+          color: #575F6E;
+          font-family: Poppins;
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 16px; /* 133.333% */
+        }
+      }
+      .send-again-button{
+        display: flex;
+        height: 32px;
+        padding: 0px 16px;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        cursor: pointer;
+        .send-again--image {
+          width: 24px;
+          height: 24px;
+        }
+        .send-again--text {
+          color: #007AFF;
+          text-align: center;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 24px;
+        }
+      }
+    }
+    .email-password-form {
+      display: flex;
+      padding: 32px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 32px;
+      align-self: stretch;
+      border-radius: 8px;
+      border: 1px solid #E2E4E5;
+      .reg-input-form {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        align-self: stretch;
+        .reg-input-form--title {
+          color: #242426;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 20px;
+        }
+        .reg-input--underscore {
+          width: 392px;
+          height: 1px;
+          background: #E2E4E5;
+        }
+        .email {
+          width: 392px;
+        }
+        .password {
+          width: 392px;
+        }
+      }
+    }
+    .register-button {
+      display: flex;
+      height: 48px;
+      padding: 0px 32px;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      border-radius: 4px;
+      background: #007AFF;
+      margin-top: 30px;
+      .register-button--text {
+        color: #FFF;
+        text-align: center;
+        font-family: Poppins;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 24px;
+        text-transform: capitalize;
+      }
+    }
+  }
+}
+.confirm-button {
+  cursor: pointer;
+  display: flex;
+  height: 48px;
+  padding: 0px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 4px;
+  border: 1px solid #BBBFC1;
+  background: #FFF;
+  .button-text {
+    color: #242731;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; /* 150% */
+    text-transform: capitalize;
+  }
+}
