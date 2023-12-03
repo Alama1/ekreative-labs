@@ -147,16 +147,18 @@
           }
         }
       }
-    }
-    .content {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: repeat(3, 1fr);
-      grid-gap: 32px;
-      grid-template-areas:
+      .content {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-gap: 32px;
+        height: 1448px;
+        grid-template-areas:
         "a b c"
         "ad d e"
         "f g h";
+      }
     }
+
   }
 }

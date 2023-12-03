@@ -5,17 +5,25 @@ import Select from 'react-select';
 import BlogCard from "../../component/blogCard/blogCard.component";
 import blogs from '../../blogs.json'
 import BlogSubscribeCard from "../../component/blogSubscribeCard/blogSubscribeCard.component";
+import PaginationButtons from "../../component/paginationButtons/paginationButtons.component";
 
 const Home = () => {
     const [searchValue, setSearchValue] = useState('')
     const [sortingTabsSelected, setSortingTabsSelected] = useState('View all')
     const [sortingDropdownSelected, setSortingDropdownSelected] = useState('Name')
     const [filteredBlogs, setFilteredBlogs] = useState([])
+    const [currentPage, setCurrentPage] = useState(1)
+
+    const blogsPrePage = 8
+    const lastIndex = currentPage * blogsPrePage
+    const firstIndex = lastIndex - blogsPrePage
+    const blogsToShow = filteredBlogs.slice(firstIndex, lastIndex)
+    const pageCount = Math.ceil(blogs.length / blogsPrePage)
     const onInputChange = (event) => {
         setSearchValue(event.target.value)
     }
 
-    const firstSorting = blogs.sort((a, b) => {
+    const sortedBlogsList = blogs.sort((a, b) => {
         if (a.title > b.title) {
             return 1;
         }
@@ -25,7 +33,7 @@ const Home = () => {
     })
 
     useEffect(() => {
-        const newFilteredBlogs = firstSorting.filter((blog) => {
+        const newFilteredBlogs = sortedBlogsList.filter((blog) => {
             return blog.title.toLowerCase().includes(searchValue.toLowerCase())
         })
         const sorted = newFilteredBlogs.sort((a, b) => {
@@ -61,6 +69,7 @@ const Home = () => {
 
     const sortingTabsSelectHandler = (e) => {
         setSortingTabsSelected(e.target.innerText)
+        setCurrentPage(1)
     }
 
     const sortingDropdownSelectHandler = (e) => {
@@ -130,23 +139,21 @@ const Home = () => {
                                 options={[
                                     {label: 'Name', value: 'Name'},
                                     {label: 'Most recent', value: 'Most recent'}
-                                    ]}
+                                ]}
                                 onChange={sortingDropdownSelectHandler}
                                 className='sorting-dropdown-selector'
                             />
                         </div>
                     </div>
                     <div className='content'>
-                        {filteredBlogs.map((blog) => {
+                        {blogsToShow.map((blog) => {
                             return <BlogCard img={blog.image} title={blog.title} annotation={blog.annotation}
                                              tag={blog.tag} author_last_name={blog.author_last_name}
                                              author_first_name={blog.author_first_name} date={blog.creation_day}/>
                         })}
                         <BlogSubscribeCard onButtonPress={subscribeButtonHandler}/>
                     </div>
-                    <div className='pagination'>
-
-                    </div>
+                    <PaginationButtons currentPage={currentPage} numberOfPages={pageCount} onPageSelect={setCurrentPage}/>
                 </div>
             </div>
         </div>
