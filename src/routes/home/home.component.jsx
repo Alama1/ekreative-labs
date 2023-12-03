@@ -1,22 +1,74 @@
 import './home.style.scss'
 import searchIcon from '../../assets/search.svg'
-import {useState} from "react";
+import {useEffect, useRef, useState} from "react";
 import Select from 'react-select';
+import BlogCard from "../../component/blogCard/blogCard.component";
+import blogs from '../../blogs.json'
+import BlogSubscribeCard from "../../component/blogSubscribeCard/blogSubscribeCard.component";
 
 const Home = () => {
     const [searchValue, setSearchValue] = useState('')
     const [sortingTabsSelected, setSortingTabsSelected] = useState('View all')
-    const [sortingDropdownSelected, setSortingDropdownSelected] = useState('Most recent')
+    const [sortingDropdownSelected, setSortingDropdownSelected] = useState('Name')
+    const [filteredBlogs, setFilteredBlogs] = useState([])
     const onInputChange = (event) => {
         setSearchValue(event.target.value)
-        console.log(searchValue)
     }
 
-    const onSortingTabsSelect = (e) => {
+    const firstSorting = blogs.sort((a, b) => {
+        if (a.title > b.title) {
+            return 1;
+        }
+        if (a.title < b.title) {
+            return -1;
+        }
+    })
+
+    useEffect(() => {
+        const newFilteredBlogs = firstSorting.filter((blog) => {
+            return blog.title.toLowerCase().includes(searchValue.toLowerCase())
+        })
+        const sorted = newFilteredBlogs.sort((a, b) => {
+            if (sortingDropdownSelected === 'Name') {
+                if (a.title > b.title) {
+                    return 1;
+                }
+                if (a.title < b.title) {
+                    return -1;
+                }
+
+            } else {
+                if (a.creation_day < b.creation_day) {
+                    return 1
+                }
+                if (a.creation_day > b.creation_day) {
+                    return -1
+                }
+
+            }
+            return 0
+        })
+        if (sortingTabsSelected === 'View all') {
+            setFilteredBlogs(sorted)
+            return
+        }
+        const twiceFiltered = sorted.filter((blog) => {
+            return blog.tag.toLowerCase() === sortingTabsSelected.toLowerCase()
+        })
+        setFilteredBlogs(twiceFiltered)
+    }, [searchValue, sortingTabsSelected, sortingDropdownSelected])
+
+
+    const sortingTabsSelectHandler = (e) => {
         setSortingTabsSelected(e.target.innerText)
     }
 
-    const onSortingDropdownSelect = (e) => {
+    const sortingDropdownSelectHandler = (e) => {
+        const sortingValue = e.value
+        setSortingDropdownSelected(sortingValue)
+    }
+
+    const subscribeButtonHandler = (e) => {
         console.log(e)
     }
 
@@ -51,19 +103,24 @@ const Home = () => {
                 <div className='container'>
                     <div className='control-panel'>
                         <div className='sorting-tabs'>
-                            <div onClick={onSortingTabsSelect} style={sortingTabsSelected === 'View all' ? {borderBottom: '2px solid #7F56D9'} : {borderBottom: 'none'}}>
+                            <div onClick={sortingTabsSelectHandler}
+                                 style={sortingTabsSelected === 'View all' ? {borderBottom: '2px solid #7F56D9'} : {borderBottom: 'none'}}>
                                 View all
                             </div>
-                            <div onClick={onSortingTabsSelect} style={sortingTabsSelected === 'Design' ? {borderBottom: '2px solid #7F56D9'} : {borderBottom: 'none'}}>
+                            <div onClick={sortingTabsSelectHandler}
+                                 style={sortingTabsSelected === 'Design' ? {borderBottom: '2px solid #7F56D9'} : {borderBottom: 'none'}}>
                                 Design
                             </div>
-                            <div onClick={onSortingTabsSelect} style={sortingTabsSelected === 'Product' ? {borderBottom: '2px solid #7F56D9'} : {borderBottom: 'none'}}>
+                            <div onClick={sortingTabsSelectHandler}
+                                 style={sortingTabsSelected === 'Product' ? {borderBottom: '2px solid #7F56D9'} : {borderBottom: 'none'}}>
                                 Product
                             </div>
-                            <div onClick={onSortingTabsSelect} style={sortingTabsSelected === 'Software Engineering' ? {borderBottom: '2px solid #7F56D9'} : {borderBottom: 'none'}}>
+                            <div onClick={sortingTabsSelectHandler}
+                                 style={sortingTabsSelected === 'Software Engineering' ? {borderBottom: '2px solid #7F56D9'} : {borderBottom: 'none'}}>
                                 Software Engineering
                             </div>
-                            <div onClick={onSortingTabsSelect} style={sortingTabsSelected === 'Customer Success' ? {borderBottom: '2px solid #7F56D9'} : {borderBottom: 'none'}}>
+                            <div onClick={sortingTabsSelectHandler}
+                                 style={sortingTabsSelected === 'Customer Success' ? {borderBottom: '2px solid #7F56D9'} : {borderBottom: 'none'}}>
                                 Customer Success
                             </div>
                         </div>
@@ -71,15 +128,21 @@ const Home = () => {
                             <Select
                                 placeholder={sortingDropdownSelected}
                                 options={[
-                                    { label: 'Most recent', value: 'Most recent'},
-                                    { label: 'Name', value: 'Name'}]}
-                                onChange={onSortingDropdownSelect}
+                                    {label: 'Name', value: 'Name'},
+                                    {label: 'Most recent', value: 'Most recent'}
+                                    ]}
+                                onChange={sortingDropdownSelectHandler}
                                 className='sorting-dropdown-selector'
                             />
                         </div>
                     </div>
                     <div className='content'>
-
+                        {filteredBlogs.map((blog) => {
+                            return <BlogCard img={blog.image} title={blog.title} annotation={blog.annotation}
+                                             tag={blog.tag} author_last_name={blog.author_last_name}
+                                             author_first_name={blog.author_first_name} date={blog.creation_day}/>
+                        })}
+                        <BlogSubscribeCard onButtonPress={subscribeButtonHandler}/>
                     </div>
                     <div className='pagination'>
 

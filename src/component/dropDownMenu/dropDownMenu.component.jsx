@@ -16,7 +16,7 @@ const DropDownMenu = ({ options, onSelect, text }) => {
             bottom: 'auto',
             marginRight: '-50%',
             transform: 'translate(-50%, -50%)',
-            borderRadius: '16px'
+            borderRadius: '4px'
         },
     };
     const openModal = () => {
@@ -26,22 +26,6 @@ const DropDownMenu = ({ options, onSelect, text }) => {
     const closeModal = () => {
         setIsModalOpen(false);
     };
-
-    useEffect(() => {
-        const calculateModalPosition = () => {
-            if (buttonRef.current) {
-                const buttonRect = buttonRef.current.getBoundingClientRect();
-                const modalTop = buttonRect.bottom + window.scrollY;
-                return modalTop;
-            }
-            return 0;
-        };
-
-        if (isModalOpen) {
-            Modal.defaultStyles.overlay.top = 0; // Reset the top value
-            Modal.defaultStyles.content.top = calculateModalPosition();
-        }
-    }, [isModalOpen]);
     const handleOptionClick = (option) => {
         setSelectedOption(option);
         onSelect(option);
@@ -62,7 +46,7 @@ const DropDownMenu = ({ options, onSelect, text }) => {
                     ariaHideApp={false}
                 >
                     {options.map((option) => {
-                        return <h1 key={option.value} onClick={() => {handleOptionClick(option.value)}}>{option.label}</h1>
+                        return <h2 key={option.value} onClick={() => {handleOptionClick(option.value)}}>{option.label}</h2>
                     })}
                 </Modal>
             </div>
