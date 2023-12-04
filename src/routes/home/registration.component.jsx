@@ -5,9 +5,11 @@ import Close from '../../assets/Close-icon.svg'
 import Edit from '../../assets/edit-number.svg'
 import SendAgain from '../../assets/Send-again.svg'
 import {Fragment, useEffect, useState} from "react";
-import StageBar from "../stageBar/stageBar.component";
-import TelephoneCountryPicker from "../telephoneCountryPicker/telephoneCountryPicker.component";
+import StageBar from "../../components/stageBar/stageBar.component";
+import ComboBox from "../../components/telephoneCountryPicker/comboBox.component";
 import {useForm} from "react-hook-form";
+import ProfileInfoModal from "../../components/modals/profileInfo/profileInfoModal.component";
+import countryCodes from '../../countryCodes.json'
 
 const Registration = () => {
     const [stage, setStage] = useState(1)
@@ -15,7 +17,14 @@ const Registration = () => {
     const [telephoneCode, setTelephoneCode] = useState('+1')
     const [telephoneNumber, setTelephoneNumber] = useState('--- --- ---')
     const [confirmationCode, setConfirmationCode] = useState('')
-    const [loginData, setLoginData] = useState({})
+    const [isModalOpen, setIsModalOpen] = useState(false)
+    const [userEmail, setUserEmail] = useState('')
+    const [userPassword, setUserPassword] = useState('')
+
+
+    const onlyCodes = countryCodes.map((code) => {
+        return code.code
+    })
     useEffect(() => {
         if(stage !== 1) {
             setIsNotificationHidden(true)
@@ -25,12 +34,18 @@ const Registration = () => {
     const {
         register,
         handleSubmit,
-        watch,
         formState: { errors },
     } = useForm()
 
     const onRegSubmit = (data) => {
-        setLoginData(data)
+        console.log(data)
+        setUserEmail(data.email)
+        setIsModalOpen(true)
+    }
+
+    const onDataCollected = (modalData) => {
+
+        console.log({userEmail, userPassword, phone_number: `${telephoneCode} ${telephoneNumber}`})
     }
     const confirmConfirmationCode = () => {
         if(confirmationCode.split('').length === 4) {
@@ -48,6 +63,7 @@ const Registration = () => {
 
     return (
         <div className='registration'>
+            {isModalOpen ? <ProfileInfoModal  setIsOpen={setIsModalOpen} dataCollected = {onDataCollected} isOpen={{isModalOpen}}/> : null}
             <div className='logo'>
                 <img alt='Company logo' className='img' src={Logo}/>
                 <p className='company-name'>
@@ -73,7 +89,7 @@ const Registration = () => {
                             <div className='phone-number-enter-form'>
                                 <p className='form-title'>Enter your phone number</p>
                                 <div className='form-fields'>
-                                    <TelephoneCountryPicker onCodeSelect={setTelephoneCode} selectedValue={telephoneCode} />
+                                    <ComboBox onCodeSelect={setTelephoneCode} selectedValue={telephoneCode} arrayOfChoices={onlyCodes} />
                                     <div>
                                         <input className='telephone-input' onChange={onTelephoneInputChange} placeholder={telephoneNumber}/>
                                         <div className='input-underline'/>
@@ -153,7 +169,7 @@ const Registration = () => {
                                             <div className='reg-input--underscore'/>
                                         </div>
                                     </div>
-                                    <button type='submit' className='register-button' onClick={() => {handleSubmit(onRegSubmit)}}>
+                                    <button type='submit' className='register-button'>
                                         <p className='register-button--text'>
                                             Register now
                                         </p>
@@ -164,6 +180,7 @@ const Registration = () => {
                     }
                 </div>
             </div>
+
         </div>
     )
 }

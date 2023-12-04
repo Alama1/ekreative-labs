@@ -1,11 +1,9 @@
 import { Fragment, useState } from 'react'
 import { Combobox, Transition } from '@headlessui/react'
 import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid'
-import countryCodes from '../../countryCodes.json'
-import './telephoneCountryPicker.style.scss'
 
 
-export default function TelephoneCountryPicker({ onCodeSelect, selectedValue }) {
+export default function ComboBox({ onCodeSelect, selectedValue, arrayOfChoices }) {
     const [selected, setSelected] = useState(selectedValue)
     const [query, setQuery] = useState('')
 
@@ -14,18 +12,22 @@ export default function TelephoneCountryPicker({ onCodeSelect, selectedValue }) 
         setSelected(e)
     }
 
-    const filteredCodes =
+    let filteredCodes =
         query === ''
-            ? countryCodes
-            : countryCodes.filter((code) =>
-                code.code
+            ? arrayOfChoices
+            : arrayOfChoices.filter((code) =>
+                code
                     .toLowerCase()
                     .replace(/\s+/g, '')
                     .includes(query.toLowerCase().replace(/\s+/g, ''))
             )
 
+    if (!filteredCodes) {
+        filteredCodes = ['placeholder', 'placeholder', 'placeholder']
+    }
+
     return (
-        <div className="top-16 w-72 country-number">
+        <div className="top-16 country-number">
             <Combobox value={selected} onChange={(e) => {onSelectHandler(e)}}>
                 <div className="relative mt-1">
                     <div className="relative w-full cursor-default overflow-hidden rounded-lg bg-white text-left shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75 focus-visible:ring-offset-2 focus-visible:ring-offset-teal-300 sm:text-sm">
@@ -56,13 +58,13 @@ export default function TelephoneCountryPicker({ onCodeSelect, selectedValue }) 
                             ) : (
                                 filteredCodes.map((code) => (
                                     <Combobox.Option
-                                        key={code.name}
+                                        key={code}
                                         className={({ active }) =>
                                             `relative cursor-default select-none py-2 pl-10 pr-4 ${
                                                 active ? 'bg-teal-600 text-white' : 'text-gray-900'
                                             }`
                                         }
-                                        value={code.code}
+                                        value={code}
                                     >
                                         {({ selected, active }) => (
                                             <>
@@ -71,7 +73,7 @@ export default function TelephoneCountryPicker({ onCodeSelect, selectedValue }) 
                                 selected ? 'font-medium' : 'font-normal'
                             }`}
                         >
-                          {code.code}
+                          {code}
                         </span>
                                                 {selected ? (
                                                     <span
