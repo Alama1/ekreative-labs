@@ -25,6 +25,7 @@ const Registration = () => {
     const onlyCodes = countryCodes.map((code) => {
         return code.code
     })
+
     useEffect(() => {
         if(stage !== 1) {
             setIsNotificationHidden(true)
@@ -38,14 +39,14 @@ const Registration = () => {
     } = useForm()
 
     const onRegSubmit = (data) => {
-        console.log(data)
         setUserEmail(data.email)
+        setUserPassword(data.password)
         setIsModalOpen(true)
     }
 
     const onDataCollected = (modalData) => {
 
-        console.log({userEmail, userPassword, phone_number: `${telephoneCode} ${telephoneNumber}`})
+        console.log({userEmail, userPassword, phone_number: `${telephoneCode} ${telephoneNumber}`, profile_info: modalData})
     }
     const confirmConfirmationCode = () => {
         if(confirmationCode.split('').length === 4) {
@@ -63,7 +64,7 @@ const Registration = () => {
 
     return (
         <div className='registration'>
-            {isModalOpen ? <ProfileInfoModal  setIsOpen={setIsModalOpen} dataCollected = {onDataCollected} isOpen={{isModalOpen}}/> : null}
+            {isModalOpen ? <ProfileInfoModal  setIsOpen={setIsModalOpen} email={userEmail} phoneNumber={`${telephoneCode} ${telephoneNumber}`} dataCollected = {onDataCollected} isOpen={{isModalOpen}}/> : null}
             <div className='logo'>
                 <img alt='Company logo' className='img' src={Logo}/>
                 <p className='company-name'>
@@ -89,7 +90,7 @@ const Registration = () => {
                             <div className='phone-number-enter-form'>
                                 <p className='form-title'>Enter your phone number</p>
                                 <div className='form-fields'>
-                                    <ComboBox onCodeSelect={setTelephoneCode} selectedValue={telephoneCode} arrayOfChoices={onlyCodes} />
+                                    <ComboBox zIndex='0' onCodeSelect={setTelephoneCode} selectedValue={telephoneCode} arrayOfChoices={onlyCodes} />
                                     <div>
                                         <input className='telephone-input' onChange={onTelephoneInputChange} placeholder={telephoneNumber}/>
                                         <div className='input-underline'/>
@@ -180,7 +181,9 @@ const Registration = () => {
                     }
                 </div>
             </div>
-
+            <div>
+                X
+            </div>
         </div>
     )
 }

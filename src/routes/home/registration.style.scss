@@ -5,6 +5,7 @@
   padding: 44px 44px 44px 88px;
   align-items: flex-start;
   flex-shrink: 0;
+  justify-content: space-between;
   .logo {
     display: flex;
     align-items: center;
@@ -31,7 +32,6 @@
     align-items: flex-start;
     gap: 80px;
     flex-shrink: 0;
-    margin-left: 30%;
     .registration-form {
       display: flex;
       flex-direction: column;

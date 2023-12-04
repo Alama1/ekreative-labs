@@ -3,7 +3,7 @@ import { Combobox, Transition } from '@headlessui/react'
 import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid'
 
 
-export default function ComboBox({ onCodeSelect, selectedValue, arrayOfChoices }) {
+export default function ComboBox({ onCodeSelect, selectedValue, arrayOfChoices, zIndex }) {
     const [selected, setSelected] = useState(selectedValue)
     const [query, setQuery] = useState('')
 
@@ -27,7 +27,7 @@ export default function ComboBox({ onCodeSelect, selectedValue, arrayOfChoices }
     }
 
     return (
-        <div className="top-16 country-number">
+        <div className="top-16 country-number" style={{'zIndex': zIndex}}>
             <Combobox value={selected} onChange={(e) => {onSelectHandler(e)}}>
                 <div className="relative mt-1">
                     <div className="relative w-full cursor-default overflow-hidden rounded-lg bg-white text-left shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75 focus-visible:ring-offset-2 focus-visible:ring-offset-teal-300 sm:text-sm">
